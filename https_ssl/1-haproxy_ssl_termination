@@ -40,11 +40,11 @@ frontend fred-frontend-http
         default_backend fred-backend
 
 frontend fred-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.fniyonshuti.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.fredstudio.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	default_backend fred-backend
 
 backend fred-backend
         balance roundrobin
-        server 6238-web-01 54.196.216.8:80 check
-        server 6238-web-02 98.80.15.59:80 check
+        server 6235-web-01 54.157.61.5:80 check
+        server 6235-web-02 18.234.64.4:80 check
